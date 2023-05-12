@@ -1,0 +1,156 @@
+.union {
+  margin-top: 40px;
+
+  @include breakpoint(xs) {
+    margin-top: 24px;
+  }
+  &__right {
+    order: 1;
+    margin-top: 40px;
+    padding: 50px 40px 50px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    height: min-content;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    position: sticky;
+    top: 40px;
+
+    @include breakpoint(xs) {
+      margin-top: 0px;
+      box-shadow: none;
+      border-radius: 0px;
+      position: relative;
+      padding: 0;
+      display: grid;
+      grid-template-rows: 26px 26px;
+      top: 0px;
+      gap: 20px;
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+
+      @include breakpoint(xs) {
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4) {
+          grid-row-start: 2;
+        }
+      }
+
+      &--description {
+        span {
+          color: #bdbdbd;
+          text-transform: uppercase;
+        }
+
+        p {
+          margin-top: 4px;
+          width: max-content;
+        }
+      }
+    }
+  }
+
+  &__left {
+    &__ingredients {
+      h2 {
+        margin-top: 40px;
+
+        @include breakpoint(xs) {
+          margin-top: 30px;
+        }
+      }
+      &__list__container {
+        h3 {
+          margin-top: 30px;
+          margin-bottom: 30px;
+
+          @include breakpoint(xs) {
+            margin-top: 16px;
+            margin-bottom: 16px;
+          }
+        }
+        &__items {
+          display: flex;
+
+          input {
+            &:checked {
+              & + label {
+                text-decoration: line-through;
+              }
+            }
+          }
+
+          label {
+            margin-left: 15px;
+            line-height: 25px;
+            width: 530px;
+
+            @include breakpoint(xs) {
+              width: 100%;
+            }
+
+            @include breakpoint(xs){
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    &__instructions {
+      margin-top: 30px;
+
+      &__list {
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        &_items {
+          display: grid;
+          grid-template-columns: 36px 1fr;
+          gap: 15px;
+
+          div {
+            height: 36px;
+            text-align: center;
+            background: orange;
+            border-radius: 6px;
+            color: white;
+          }
+
+          p {
+            b {
+              font-weight: 700;
+            }
+          }
+        }
+
+        &_link {
+          margin-top: 50px;
+          color: #bdbdbd;
+
+          br {
+            display: none;
+
+            @include breakpoint(xs) {
+              display: block;
+              margin-top: 0px;
+            }
+          }
+
+          a {
+            margin-top: 50px;
+            color: #bdbdbd;
+          }
+        }
+      }
+    }
+  }
+}

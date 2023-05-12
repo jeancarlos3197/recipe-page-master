@@ -1,0 +1,213 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: map-get($fnsize, global);
+  font-family: map-get($fnfamily, info);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: map-get($fnfamily, title);
+}
+
+h1 {
+  font-size: 4.8rem;
+  font-weight: 700;
+
+  @include breakpoint(xs){
+    font-size: 2.4rem;
+  }
+}
+
+h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+p {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.description--text {
+  p {
+    font-style: italic;
+    font-weight: 500;
+    width: 600px;
+
+    @include breakpoint(xs){
+      font-size: 1.2rem;
+      width: 100%;
+    }
+
+    @include breakpoint(xs){
+      width: 100%;
+    }
+  }
+}
+
+.union__right__item {
+  &--icon {
+    color: #4f4f4f;
+    font-size: 30px;
+    
+    @include breakpoint(xs){
+      font-size: 14px;
+    }
+  }
+  &--description {
+    span {
+      font-family: map-get($fnfamily, info);
+      font-weight: 700;
+      font-size: 1rem;
+      color: #bdbdbd;
+
+      @include breakpoint(xs){
+        font-size: 0.8rem;
+      }
+    }
+    p {
+      font-family: map-get($fnfamily, info);
+      font-weight: 500;
+      font-size: 1.4rem;
+
+      @include breakpoint(xs){
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+.union__left__ingredients {
+  h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+
+    @include breakpoint(xs){
+      font-size: 1.8rem;
+    }
+  }
+
+  h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    font-style: italic;
+
+    @include breakpoint(xs){
+      font-size: 1.6rem;
+    }
+  }
+
+  input[type="checkbox"] {
+    transform: scale(1.5);
+    border: 1px solid #828282;
+  }
+
+  label {
+    font-family: map-get($fnfamily, info);
+    font-size: 1.6rem;
+
+    @include breakpoint(xs){
+      font-size: 1.4rem;
+    }
+  }
+  span {
+    font-weight: 700;
+  }
+  i {
+    font-style: italic;
+  }
+}
+.union__left__instructions__list {
+  &_items {
+    p {
+      &:nth-child(1) {
+        font-family: map-get($fnfamily, title);
+        font-size: 2.4rem;
+      }
+      &:nth-child(2) {
+        font-family: map-get($fnfamily, info);
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 150%;
+        width: 530px;
+
+        @include breakpoint(xs){
+          width: 100%;
+        }
+        @include breakpoint(xs){
+          width: 100%;
+        }
+      }
+    }
+  }
+  &_link {
+    font-family: map-get($fnfamily, info);
+    font-size: 1.6rem;
+
+    @include breakpoint(xs){
+      font-size: 1.2rem;
+      font-style: italic;
+    }
+
+    a {
+      font-family: map-get($fnfamily, info);
+      font-size: 1.6rem;
+      text-decoration: none;
+
+      @include breakpoint(xs){
+        font-size: 1.2rem;
+        font-style: italic;
+        width: 100%; 
+      }
+    }
+  }
+}
+footer{
+    p{
+        font-family: map-get($fnfamily, info);
+        font-size: 1.4rem;
+
+        a{
+            font-family: map-get($fnfamily, info);
+            font-weight: 700;
+            font-size: 1.4rem;
+            text-decoration: none;
+        }
+    }
+}
+
+.wrapper{
+    padding: 50px 150px 0px 150px;
+
+    @include breakpoint(xs){
+      padding: 30px 20px 0px 20px;
+    }
+
+    @include breakpoint(sm){
+      padding: 30px 20px 0px 20px;
+    }
+}
+
+.orange{
+  color: orange;
+}
+
+.union{
+  display: flex;
+  justify-content: space-between;
+
+  @include breakpoint(xs){
+    display: block;
+  }
+}
